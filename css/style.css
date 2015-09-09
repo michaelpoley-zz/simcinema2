@@ -1,0 +1,22 @@
+body {
+	margin: auto;
+	width: 450px;
+}
+
+.gametitle {
+	padding: 20px;
+	font-size: 70px;
+	text-align: center;
+
+}
+
+p {
+	font-family: helvetica;
+	text-align: center;
+
+}
+
+ul li {
+	list-style-type: none;
+}
+
