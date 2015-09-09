@@ -14,6 +14,8 @@ $("#target").click(function(){
 	$("#game").show();
 });
 
+// Button that will start the game
+
 $("#game").click(function(){
 
 });
