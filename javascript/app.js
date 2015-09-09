@@ -2,8 +2,9 @@
 // Hides the game element
 
 $("#game").hide();
+
 money = "Budget: $" + 10000000;
-prestige  = "unknown";
+prestige  = "Hollywood Outsider";
 
 // Prints the name of the Studio from a prompt
 
@@ -16,8 +17,12 @@ $("#target").click(function(){
 	$("#game").show();
 });
 
-// Button that will start the game
+// Button that will start the game 
+// Prompts for a movie title
 
 $("#game").click(function(){
+	var question2 = prompt("What is the name of your movie?");
+	$("#movieName").append("Movie Title: " + question2);
+	$("#game").hide();
 
 });
