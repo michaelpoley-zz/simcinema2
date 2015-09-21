@@ -7,6 +7,9 @@ $("#game").hide();
 money = "Budget: $" + 10000000;
 prestige  = "Hollywood Outsider";
 
+mode = "";
+change_mode("home")//start off on home mode; 
+
 //Selects which mode we are currently in
 function change_mode(new_mode){
 	if($("#" + new_mode).attr('class') != 'mode'){ //we tried to switch to a mode that doesn't have a div in index.html
@@ -14,6 +17,8 @@ function change_mode(new_mode){
 		return null;
 	}
 	else{
+		//update mode variable
+		mode = new_mode;
 		//hide all the mode divs
 		var mode_divs = $(".mode").hide();
 		//show just the div we want
