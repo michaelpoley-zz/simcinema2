@@ -17,12 +17,9 @@ function change_mode(new_mode){
 		return null;
 	}
 	else{
-		//update mode variable
-		mode = new_mode;
-		//hide all the mode divs
-		var mode_divs = $(".mode").hide();
-		//show just the div we want
-		$("#" + new_mode).show()
+		mode = new_mode;//update mode variable
+		var mode_divs = $(".mode").hide();//hide all the mode divs
+		$("#" + new_mode).show()//show just the div we want
 		}
 	}
 
