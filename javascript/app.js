@@ -1,14 +1,12 @@
 
 
 // Hides the game element
-
 $("#game").hide();
 
-money = "Budget: $" + 10000000;
-prestige  = "Hollywood Outsider";
+mode = ""; //mode variable in global scope
+change_mode("start");//start off in start mode; 
 
-mode = "";
-change_mode("home")//start off on home mode; 
+var currentStudio;
 
 //Selects which mode we are currently in
 function change_mode(new_mode){
@@ -23,15 +21,17 @@ function change_mode(new_mode){
 		}
 	}
 
-// Prints the name of the Studio from a prompt
-
-$("#target").click(function(){
-	var question1 = prompt("What is the name of your studio?");
-	$("#printStudio").append(question1 + " Studio(s)");
-	$("#currentCash").append(money);
-	$("#currentPrestige").append("Current Prestige: " + prestige);
-	$("#target").hide();
-	$("#game").show();
+// Create a new Studio
+$("#newStudio").click(function(){
+	var newStudioName = $('#newStudioName').val(); //get new name from textbox
+	if(newStudioName.length > 1){
+		currentStudio = new Studio($('#newStudioName').val()); //instantiate studio object
+		currentStudio.update_hud(); //update the HUD
+		change_mode("home");
+	}
+	else{
+		alert("Please enter a longer name for your studio!");
+	}
 });
 
 // Button that will start the game 
