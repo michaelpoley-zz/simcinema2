@@ -9,6 +9,12 @@ change_mode("start");//start off in start mode;
 var currentProdco;
 var currentMovie;
 var studioList = [];
+//Studios that will be in the game
+studioList.push( new Studio("21st Century Faux", 0.5, 0.5));
+studioList.push( new Studio("Fony Pictures", 0.5, 0.5));
+studioList.push( new Studio("Willard Diznick Studios", 0.5, 0.5));
+studioList.push( new Studio("Periapsis Pictures", 0.5, 0.5));
+studioList.push( new Studio("Specific Studios", 0.5, 0.5));
 
 //Selects which mode we are currently in
 function change_mode(new_mode){
@@ -36,7 +42,7 @@ $("#newProdco").click(function(){
 	}
 });
 
-// Create a new Movie
+// Start a new Movie
 $("#startNewMovie").click(function(){
 	change_mode("basics");
 });
@@ -61,11 +67,22 @@ $(".genreCheckbox").click(function(){ //When any of the genre checkboxes are cli
 	}
 });
 
-//Create new movie.  Happens when user clicks the pitch button
+//Actually create new movie.  Happens when user clicks the pitch button
 $("#pitchMovie").click(function(){
-	//alert("making a movie!")
-	currentMovie = new Movie($("#newMovieTitle").val(), $("#newMovieSummary").val(),checked_genres) //instantiate new movie object
+	if(($("#newMovieTitle").val().length > 0 )&& ($("#newMovieSummary").val().length > 0) && checked_genres.length > 0){
+		currentMovie = new Movie($("#newMovieTitle").val(), $("#newMovieSummary").val(),checked_genres) //instantiate new movie object
+		change_mode("pitch")
+	}
+	else{
+		alert("Please finish describing your movie!")
+	}
 });
+
+//populate list of movie studios
+for(var i = 0; i < studioList.length; i++){
+	console.log("pbbt")
+	$("#studioList").append(studioList[i].toHTML());
+}
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");
