@@ -34,8 +34,29 @@ $("#newStudio").click(function(){
 	}
 });
 
-// Button that will start the game 
-// Prompts for a movie title
+// Create a new Movie
+$("#startNewMovie").click(function(){
+	change_mode("basics");
+});
+
+//Limit genre selection 
+max_genres = 2;
+$(".genreCheckbox").click(function(){ //When any of the genre checkboxes are clicked
+	var checked_counter = 0;
+	$(".genreCheckbox").each(function(index,value){ //loop over all the genre checkboxes
+		if($(this).is(":checked")){
+			checked_counter ++; //if box is checked, add one to counter
+		}
+	});
+	if(checked_counter >= max_genres){ //if more than one has been checked
+		$(".genreCheckbox").each(function(index,value){ //loop over them all again
+		if($(this).is(":checked")) {$(this).attr("disabled",false)} else {$(this).attr("disabled",true)}//disable unchecked boxes to prevent checking too many
+		});
+	}
+	else{ //fewer than 2 boxes checked
+		$(".genreCheckbox").attr("disabled",false) //make sure all checkboxes are active
+	}
+});
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");

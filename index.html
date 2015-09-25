@@ -26,11 +26,24 @@
 	</div>
 	
 	<div class="mode" id ="home"><!--The home div is shown when we're not currently making a movie-->
-	You are not currently making a movie
+	You are not currently making a movie, but here is where you will be able to see all your past movies once Mike and John code that bit.
+	<button id = "startNewMovie">New Movie</button>
 	</div>
 	
 	<div class="mode" id = "basics"><!--The basics div is shown when we're starting a new movie-->
-	Here you will enter title, genre, synopsis, etc. 
+	Here you will enter title, genre, synopsis, etc. <br/>
+	<input type ="text" id ="newMovieTitle" placeholder = "Title"/><br/>
+	<textarea id ="newMovieSummary" placeholder = "Synopsis" rows = "10", cols = "40" ></textarea><br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "action">Action / Adventure<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "comedy">Comedy<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "drama">Drama<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "epic">Historical Epic<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "horror">Horror<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "musical">Musical<br/>
+	<input type="checkbox" class = "genreCheckbox" name = "genre" value = "scifi">Science Fiction<br/>
+	
+	
+	<button id = "pitchMovie">Pitch This Movie</button>
 	</div>
 	
 	<div class="mode" id = "pitch"><!--The pitch div is shown when we're pitching to studios-->
