@@ -1,6 +1,6 @@
-//an object representing a studio.
+//an object representing a production company.
 
-Studio = function(name){
+Prodco = function(name){
 	this.name = name;
 	this.cash = 0;
 	this.prestige_level = 0; //stored as a number to make it easier to go up and down.
@@ -8,16 +8,16 @@ Studio = function(name){
 }
 
 //functions to update the HUD
-Studio.prototype.update_name = function(){
-	$("#printStudio").html("Studio Name: " + this.name);
+Prodco.prototype.update_name = function(){
+	$("#printStudio").html("Production Company Name: " + this.name);
 }
-Studio.prototype.update_cash = function(){
+Prodco.prototype.update_cash = function(){
 	$("#currentCash").html("Cash on Hand: $" + this.cash);
 }
-Studio.prototype.update_prestige = function(){
+Prodco.prototype.update_prestige = function(){
 	$("#currentPrestige").html("Prestige Level: " + prestige_levels[this.prestige_level]);
 }
-Studio.prototype.update_hud = function() {
+Prodco.prototype.update_hud = function() {
 	this.update_name();
 	this.update_cash();
 	this.update_prestige();

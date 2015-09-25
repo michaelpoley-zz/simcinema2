@@ -6,7 +6,7 @@ $("#game").hide();
 mode = ""; //mode variable in global scope
 change_mode("start");//start off in start mode; 
 
-var currentStudio;
+var currentProdco;
 
 //Selects which mode we are currently in
 function change_mode(new_mode){
@@ -21,16 +21,16 @@ function change_mode(new_mode){
 		}
 	}
 
-// Create a new Studio
-$("#newStudio").click(function(){
-	var newStudioName = $('#newStudioName').val(); //get new name from textbox
-	if(newStudioName.length > 1){
-		currentStudio = new Studio($('#newStudioName').val()); //instantiate studio object
-		currentStudio.update_hud(); //update the HUD
+// Create a new Prodco
+$("#newProdco").click(function(){
+	var newProdcoName = $('#newProdcoName').val(); //get new name from textbox
+	if(newProdcoName.length > 1){
+		currentProdco = new Prodco($('#newProdcoName').val()); //instantiate prodco object
+		currentProdco.update_hud(); //update the HUD
 		change_mode("home");
 	}
 	else{
-		alert("Please enter a longer name for your studio!");
+		alert("Please enter a longer name for your prodco!");
 	}
 });
 
