@@ -8,6 +8,7 @@ change_mode("start");//start off in start mode;
 
 var currentProdco;
 var currentMovie;
+var studioList = [];
 
 //Selects which mode we are currently in
 function change_mode(new_mode){

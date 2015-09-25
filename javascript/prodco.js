@@ -9,7 +9,7 @@ Prodco = function(name){
 
 //functions to update the HUD
 Prodco.prototype.update_name = function(){
-	$("#printStudio").html("Production Company Name: " + this.name);
+	$("#currentProdco").html("Production Company Name: " + this.name);
 }
 Prodco.prototype.update_cash = function(){
 	$("#currentCash").html("Cash on Hand: $" + this.cash);
