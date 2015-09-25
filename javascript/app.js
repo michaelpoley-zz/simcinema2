@@ -7,6 +7,7 @@ mode = ""; //mode variable in global scope
 change_mode("start");//start off in start mode; 
 
 var currentProdco;
+var currentMovie;
 
 //Selects which mode we are currently in
 function change_mode(new_mode){
@@ -39,23 +40,30 @@ $("#startNewMovie").click(function(){
 	change_mode("basics");
 });
 
-//Limit genre selection 
+//Limit genre selection when planning a new movie
 max_genres = 2;
+checked_genres = [];
 $(".genreCheckbox").click(function(){ //When any of the genre checkboxes are clicked
-	var checked_counter = 0;
+	checked_genres = [];
 	$(".genreCheckbox").each(function(index,value){ //loop over all the genre checkboxes
 		if($(this).is(":checked")){
-			checked_counter ++; //if box is checked, add one to counter
+			checked_genres.push($(this).val()); //if box is checked, push it into the array
 		}
 	});
-	if(checked_counter >= max_genres){ //if more than one has been checked
+	if(checked_genres.length >= max_genres){ //if more than the limit has been checked
 		$(".genreCheckbox").each(function(index,value){ //loop over them all again
 		if($(this).is(":checked")) {$(this).attr("disabled",false)} else {$(this).attr("disabled",true)}//disable unchecked boxes to prevent checking too many
 		});
 	}
-	else{ //fewer than 2 boxes checked
+	else{ //fewer than limit # of boxes checked
 		$(".genreCheckbox").attr("disabled",false) //make sure all checkboxes are active
 	}
+});
+
+//Create new movie.  Happens when user clicks the pitch button
+$("#pitchMovie").click(function(){
+	//alert("making a movie!")
+	currentMovie = new Movie($("#newMovieTitle").val(), $("#newMovieSummary").val(),checked_genres) //instantiate new movie object
 });
 
 $("#game").click(function(){
