@@ -7,7 +7,13 @@ Studio = function(name, riskiness, generosity){
 }
 
 Studio.prototype.pitch = function(prodco, movie){
-	alert("You want to pitch " + prodco.name +"'s " + movie.title + " to " + this.name);
+	var baseline_movie_value = (prodco.prestige_level * 10) + 1;
+	var actual_movie_value = Math.round(baseline_movie_value * this.generosity * Math.random());
+	var actual_movie_value = actual_movie_value * 1000000;
+	alert("You want to pitch " + prodco.name +"'s " + movie.title + " to " + this.name + "They offer you " +
+	actual_movie_value
+	);
+	
 }
 
 Studio.prototype.toHTML = function(){  //Really not sure if this is done right, but it works

@@ -1,6 +1,8 @@
 # simcinema2
 In which John Landis and Michael Poley attempt to recreate the glory that was SimCinema!
 
-John is probably totally capable of using git without looking like a fool.  Oops. Too late.
+Good stuff to run from the Javascript Console:
 
-Poley is also capable. Maybe. Maybe not. 
+change_mode("pitch") changes game mode, so you can jump around without playing through
+
+test() sets up a fake production company and movie production so you can just jump in and test

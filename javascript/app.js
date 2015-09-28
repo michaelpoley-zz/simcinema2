@@ -9,7 +9,7 @@ change_mode("start");//start off in start mode;
 var currentProdco;
 var currentMovie;
 var studioList = [];
-//Studios that will be in the game
+//Studios that will be in the game. These are stupid placeholders
 studioList.push( new Studio("21st Century Faux", 0.5, 0.5));
 studioList.push( new Studio("Fony Pictures", 0.5, 0.5));
 studioList.push( new Studio("Willard Diznick Studios", 0.5, 0.5));
@@ -29,6 +29,16 @@ function change_mode(new_mode){
 		}
 	}
 
+//Run this from the console.  It will set up a fake production company and movie for testing so you don't have to keep typing stuff in every time you want to test
+function test(mode){
+	if(typeof mode !== 'undefined'){
+		change_mode(mode);
+	}
+	currentProdco = new Prodco("Thugscience Productions")
+	currentProdco.update_hud();
+	currentMovie = new Movie("Write a Story 2: Write a Story Harder", "In post-nuclear Indiana, James and Andy must learn to survive the radioactive zombie hordes, as well as their feelings", Array("action","drama"));
+	
+}
 // Create a new Prodco
 $("#newProdco").click(function(){
 	var newProdcoName = $('#newProdcoName').val(); //get new name from textbox
@@ -80,7 +90,6 @@ $("#pitchMovie").click(function(){
 
 //populate list of movie studios
 for(var i = 0; i < studioList.length; i++){
-	console.log("pbbt")
 	$("#studioList").append(studioList[i].toHTML());
 }
 
