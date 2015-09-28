@@ -17,10 +17,22 @@ Prodco.prototype.update_cash = function(){
 Prodco.prototype.update_prestige = function(){
 	$("#currentPrestige").html("Prestige Level: " + prestige_levels[this.prestige_level]);
 }
+
+Prodco.prototype.addCash = function(ammount){
+	this.cash += ammount;
+	this.update_cash();
+}
+
+Prodco.prototype.takeCash = function(ammount){
+	this.cash -= ammount;
+	update_cash();
+}
+
 Prodco.prototype.update_hud = function() {
 	this.update_name();
 	this.update_cash();
 	this.update_prestige();
 }
 
-prestige_levels = ["Unknown", "Newcomer", "Upstart", "Respected", "Mogul"] //array of prestige_levels, in global scope 
+
+prestige_levels = ["Complete Unknown", "Newcomer", "Upstart", "Respected", "Mogul"] //array of prestige_levels, in global scope 

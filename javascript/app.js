@@ -4,20 +4,20 @@
 $("#game").hide();
 
 mode = ""; //mode variable in global scope
-change_mode("start");//start off in start mode; 
+changeMode("start");//start off in start mode; 
 
 var currentProdco;
 var currentMovie;
 var studioList = [];
 //Studios that will be in the game. These are stupid placeholders
-studioList.push( new Studio("21st Century Faux", 0.5, 0.5));
-studioList.push( new Studio("Fony Pictures", 0.5, 0.5));
+studioList.push( new Studio("21st Century Faux", 0.9, 0.1));
+studioList.push( new Studio("Fony Pictures", 0.7, 0.3));
 studioList.push( new Studio("Willard Diznick Studios", 0.5, 0.5));
-studioList.push( new Studio("Periapsis Pictures", 0.5, 0.5));
-studioList.push( new Studio("Specific Studios", 0.5, 0.5));
+studioList.push( new Studio("Periapsis Pictures", 0.3, 0.7));
+studioList.push( new Studio("Specific Studios", 0.1, 0.9));
 
 //Selects which mode we are currently in
-function change_mode(new_mode){
+function changeMode(new_mode){
 	if($("#" + new_mode).attr('class') != 'mode'){ //we tried to switch to a mode that doesn't have a div in index.html
 		console.log("Tried to switch to mode '" + new_mode + "', which is not a div that I know of.")
 		return null;
@@ -32,7 +32,7 @@ function change_mode(new_mode){
 //Run this from the console.  It will set up a fake production company and movie for testing so you don't have to keep typing stuff in every time you want to test
 function test(mode){
 	if(typeof mode !== 'undefined'){
-		change_mode(mode);
+		changeMode(mode);
 	}
 	currentProdco = new Prodco("Thugscience Productions")
 	currentProdco.update_hud();
@@ -45,7 +45,7 @@ $("#newProdco").click(function(){
 	if(newProdcoName.length > 1){
 		currentProdco = new Prodco($('#newProdcoName').val()); //instantiate prodco object
 		currentProdco.update_hud(); //update the HUD
-		change_mode("home");
+		changeMode("home");
 	}
 	else{
 		alert("Please enter a longer name for your prodco!");
@@ -54,7 +54,7 @@ $("#newProdco").click(function(){
 
 // Start a new Movie
 $("#startNewMovie").click(function(){
-	change_mode("basics");
+	changeMode("basics");
 });
 
 //Limit genre selection when planning a new movie
@@ -81,7 +81,7 @@ $(".genreCheckbox").click(function(){ //When any of the genre checkboxes are cli
 $("#pitchMovie").click(function(){
 	if(($("#newMovieTitle").val().length > 0 )&& ($("#newMovieSummary").val().length > 0) && checked_genres.length > 0){
 		currentMovie = new Movie($("#newMovieTitle").val(), $("#newMovieSummary").val(),checked_genres) //instantiate new movie object
-		change_mode("pitch")
+		changeMode("pitch")
 	}
 	else{
 		alert("Please finish describing your movie!")
