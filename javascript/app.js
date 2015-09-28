@@ -99,7 +99,27 @@ resetMovieStudios();
 
 //create the director list
 director_list = new DirectorList();
-director_list.add(new Director("Tim Burton",5));
+//add directors to the game.  These are placeholders and their stats are completely arbitrary
+director_list.add(new Director("Tim Burton",1000000));
+director_list.add(new Director("Martin Scorsese",4000000));
+director_list.add(new Director("Stephen Spielberg",3000000));
+director_list.add(new Director("Francis Ford Coppola",2000000));
+director_list.add(new Director("Quentin Tarantino",1000000));
+director_list.add(new Director("The Coen Brothers",6000000));
+director_list.add(new Director("Clint Eastwood",5500000));
+director_list.add(new Director("David Fincher",500000));
+director_list.add(new Director("Cristopher Nolan",450000));
+director_list.add(new Director("Ridley Scott",400000));
+director_list.add(new Director("David Lynch",350000));
+director_list.add(new Director("P.T. Anderson",3000000));
+director_list.add(new Director("Woody Allen",2500000));
+director_list.add(new Director("Ron Howard",2000000));
+director_list.add(new Director("James Cameron",1500000));
+director_list.add(new Director("Peter Jackson",1000000));
+director_list.add(new Director("Wes Anderson",700000));
+director_list.add(new Director("Roman Polanski",500000));
+director_list.add(new Director("Brian DePalma",400000));
+director_list.add(new Director("Robert Zemeckis",300000));
 director_list.renderInto($("#directorList"));
 
 $("#game").click(function(){

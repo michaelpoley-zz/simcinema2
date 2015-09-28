@@ -14,5 +14,11 @@ Talent.prototype.generateHTML = function(){
 	html += "$" + numberWithCommas(this.fee)
 	html += "</div>"
 	html += "</div>"
+	html = $(html)
+	html.myTalentObject = this;
 	return html;
+}
+
+Talent.prototype.affordable = function(){
+	return (this.fee < currentProdco.cash);
 }

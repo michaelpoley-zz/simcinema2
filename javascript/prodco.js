@@ -25,7 +25,7 @@ Prodco.prototype.addCash = function(ammount){
 
 Prodco.prototype.takeCash = function(ammount){
 	this.cash -= ammount;
-	update_cash();
+	this.update_cash();
 }
 
 Prodco.prototype.update_hud = function() {
