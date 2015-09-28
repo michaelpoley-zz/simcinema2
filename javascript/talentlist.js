@@ -6,3 +6,7 @@ TalentList = function(){  //this object should be extended through prototype inh
 TalentList.prototype.add(item) = function(){
 	this.list.push(item);
 }
+
+TalentList.prototype.render = function(parent){
+	parent.html("HELLOO!!!")
+}
