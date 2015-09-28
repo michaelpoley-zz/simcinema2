@@ -26,6 +26,6 @@ Studio.prototype.toHTML = function(){  //Really not sure if this is done right, 
 }
 
 pitchClickHandler = function() {
-	this.studioInstance.pitch(currentProdco, currentMovie); //this refers to the button in this case
+	this.studioInstance.pitch(currentProdco, currentMovie); //'this' refers to the button in this case
 }
 
