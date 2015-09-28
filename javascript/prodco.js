@@ -12,7 +12,7 @@ Prodco.prototype.update_name = function(){
 	$("#currentProdco").html("Production Company Name: " + this.name);
 }
 Prodco.prototype.update_cash = function(){
-	$("#currentCash").html("Cash on Hand: $" + this.cash);
+	$("#currentCash").html("Cash on Hand: $" + numberWithCommas(this.cash));
 }
 Prodco.prototype.update_prestige = function(){
 	$("#currentPrestige").html("Prestige Level: " + prestige_levels[this.prestige_level]);

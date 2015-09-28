@@ -89,9 +89,14 @@ $("#pitchMovie").click(function(){
 });
 
 //populate list of movie studios
-for(var i = 0; i < studioList.length; i++){
-	$("#studioList").append(studioList[i].toHTML());
+	
+function resetMovieStudios(){ //wrapped in a function so we can call it later
+	$("#studioList").empty()
+	for(var i = 0; i < studioList.length; i++){
+		$("#studioList").append(studioList[i].toHTML());
+	}
 }
+resetMovieStudios();
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");
