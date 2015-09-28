@@ -8,10 +8,11 @@ Studio = function(name, riskiness, generosity){
 
 Studio.prototype.pitch = function(prodco, movie){
 	var baseline_movie_value = (prodco.prestige_level * 10) + 1;
-	var actual_movie_value = Math.round(baseline_movie_value * this.generosity * Math.random());
-	var actual_movie_value = actual_movie_value * 1000000;
-	alert("You want to pitch " + prodco.name +"'s " + movie.title + " to " + this.name + "They offer you " +
-	actual_movie_value
+	console.log("baseline:" + baseline_movie_value);
+	var actual_movie_value = Math.round(baseline_movie_value * (this.generosity + Math.random()));
+	console.log("actual_movie_value:" + actual_movie_value)
+	alert("You pitch " + movie.title + " to " + this.name + "\n\nThey offer you $" +
+	actual_movie_value + " million"
 	);
 	
 }
