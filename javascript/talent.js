@@ -1,8 +1,18 @@
 Talent = function(name,fee){  //this object should be extended through prototype inheritance to create the director object, actor object, etc.
-	this.list = [];
+	this.name = name;
+	this.fee = fee;
 	
 }
 
-Talent.prototype.add = function(item){
-	this.list.push(item);
+
+Talent.prototype.generateHTML = function(){
+	html = "<div class = 'talentRow'>"
+	html += "<div class = 'talentColumn'>"
+	html += this.name
+	html += "</div>"
+	html += "<div class = 'talentColumn'>"
+	html += "$" + numberWithCommas(this.fee)
+	html += "</div>"
+	html += "</div>"
+	return html;
 }

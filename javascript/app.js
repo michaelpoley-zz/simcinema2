@@ -89,7 +89,6 @@ $("#pitchMovie").click(function(){
 });
 
 //populate list of movie studios
-	
 function resetMovieStudios(){ //wrapped in a function so we can call it later
 	$("#studioList").empty()
 	for(var i = 0; i < studioList.length; i++){
@@ -97,6 +96,11 @@ function resetMovieStudios(){ //wrapped in a function so we can call it later
 	}
 }
 resetMovieStudios();
+
+//create the director list
+director_list = new DirectorList();
+director_list.add(new Director("Tim Burton",5));
+director_list.renderInto($("#directorList"));
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");
