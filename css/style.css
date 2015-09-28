@@ -24,3 +24,16 @@ ul li {
 	color: #00FF00;
 }
 
+.talentRow {
+	display: table-row;
+	background-color: #BBFFBB;
+}
+
+.talentRow:hover{
+	background-color: #00FF00;
+}
+
+.talentColumn{
+    display: table-cell;    
+}
+
