@@ -3,4 +3,5 @@ Movie = function(title,synopsis,genres){
 	this.synopsis = synopsis;
 	this.genres = genres;
 	this.director = null;
+	this.cast = [];
 }

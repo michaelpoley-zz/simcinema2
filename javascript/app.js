@@ -121,6 +121,55 @@ director_list.add(new Director("Roman Polanski",500000));
 director_list.add(new Director("Brian DePalma",400000));
 director_list.add(new Director("Robert Zemeckis",300000));
 director_list.renderInto($("#directorList"));
+//create the actors list
+actor_list = new ActorList();
+
+//more placeholders.
+actor_list.add(new Actor("Robert DeNiro", 10000000));
+actor_list.add(new Actor("Al Pacino", 7500000));
+actor_list.add(new Actor("Jack Nicholson", 5000000));
+actor_list.add(new Actor("Daniel Day-Lewis", 2500000));
+actor_list.add(new Actor("Tom Hanks", 1000000));
+actor_list.add(new Actor("Dustin Hoffman", 900000));
+actor_list.add(new Actor("Sean Penn", 800000));
+actor_list.add(new Actor("Johnny Depp", 900000));
+actor_list.add(new Actor("Liam Neeson", 500000));
+actor_list.add(new Actor("Leonardo DiCaprio", 700000));
+actor_list.add(new Actor("Robert Downey Jr.", 600000));
+actor_list.add(new Actor("Brad Pitt", 400000));
+actor_list.add(new Actor("Tom Cruise", 300000));
+actor_list.add(new Actor("Matt Damon", 200000));
+actor_list.add(new Actor("Clint Eastwood", 400000));
+actor_list.add(new Actor("Morgan Freeman", 100000));
+actor_list.add(new Actor("Michael Caine", 1500000));
+actor_list.add(new Actor("Gary Oldman", 150000));
+actor_list.add(new Actor("Jim Carrey", 200000));
+actor_list.renderInto($("#actorList"))
+
+//even more placeholders
+actress_list = new ActorList();
+actress_list.add(new Actor("Meryl Streep", 240000000));
+actress_list.add(new Actor("Glenn Close", 14000000));
+actress_list.add(new Actor("Cate Blanchett", 14000000));
+actress_list.add(new Actor("Judi Dench", 10000000));
+actress_list.add(new Actor("Anette Bening", 20000000));
+actress_list.add(new Actor("Marion Cotillard", 2000000));
+actress_list.add(new Actor("Kate Winslet", 1000000));
+actress_list.add(new Actor("Jennifer Saunders", 100000));
+actress_list.add(new Actor("Holly Hunter", 20000000));
+actress_list.add(new Actor("Nicole Kidman", 50000000));
+actress_list.add(new Actor("Vanessa Redgrave", 60000000));
+actress_list.add(new Actor("Julie Walters", 80000000));
+actress_list.add(new Actor("Judy Davis", 14000000));
+actress_list.add(new Actor("Maggie Smith", 13000000));
+actress_list.add(new Actor("Juliette Binoche", 13000000));
+actress_list.add(new Actor("Oprah Winfrey", 16000000));
+actress_list.add(new Actor("Audrey Tautou", 17000000));
+actress_list.add(new Actor("Julianne Moore", 19000000));
+actress_list.add(new Actor("Susan Sarandon", 12000000));
+actress_list.add(new Actor("Jessica Lange", 13000000));
+
+actress_list.renderInto($("#actressList"))
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");

@@ -8,7 +8,7 @@ TalentList.prototype.add = function(item){
 
 TalentList.prototype.renderInto = function(target){
 	console.log("RENDERING TALENT LIST")
-	target.html("<div class = 'talentList'>DIRECTORS GO HERE</div>")
+	target.html("<div class = 'talentList'></div>")
 	for(var i = 0; i < this.list.length; i++){
 		newHTML = this.list[i].generateHTML();
 		target.append(newHTML);
