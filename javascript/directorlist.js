@@ -3,8 +3,7 @@ function DirectorList(){
 }
 DirectorList.prototype = Object.create(TalentList.prototype); //inherit from talentlist
 
-TalentList.prototype.assignClickHandler = function(target,data){//override the assign ClickHandler Function
-	console.log("You forgot to override the assignClickHandler function")
+DirectorList.prototype.assignClickHandler = function(target,data){//override the assign ClickHandler Function
 	target.on("click",null,data,directorClicked);//call directorClicked 
 }
 

@@ -72,6 +72,8 @@
 	
 	<div class="mode" id = "sel_composer"><!--The sel_actress div is shown when we're not currently making a movie-->
 	Here you will select a composer from a list
+	<div class="talentlist" id ="composerList">
+	</div>
 	</div>
 	
 	<div class="mode" id = "production_release"><!--The production_release div is shown when we're not currently making a movie-->
@@ -94,14 +96,17 @@
 </body>
 
 <footer>
-
+	<!--Include base class for talent-->
 	<script src="javascript/talent.js"></script>
 	<script src="javascript/talentlist.js"></script>
+	<!--Include classes for specific types of talent-->
+	<script src="javascript/composer.js"></script>
+	<script src="javascript/composerlist.js"></script>
 	<script src="javascript/director.js"></script>
 	<script src="javascript/directorlist.js"></script>
 	<script src="javascript/actor.js"></script>
 	<script src="javascript/actorlist.js"></script>
-	
+	<!--Other javascript files-->
 	<script src="javascript/util.js"></script>
 	<script src="javascript/studio.js"></script>
 	<script src="javascript/movie.js"></script>

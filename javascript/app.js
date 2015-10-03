@@ -35,6 +35,7 @@ function test(mode){
 		changeMode(mode);
 	}
 	currentProdco = new Prodco("Thugscience Productions")
+	currentProdco.addCash(1000000000)//a billion dollars!
 	currentProdco.update_hud();
 	currentMovie = new Movie("Write a Story 2: Write a Story Harder", "In post-nuclear Indiana, James and Andy must learn to survive the radioactive zombie hordes, as well as their feelings", Array("action","drama"));
 	
@@ -170,6 +171,23 @@ actress_list.add(new Actor("Susan Sarandon", 12000000));
 actress_list.add(new Actor("Jessica Lange", 13000000));
 
 actress_list.renderInto($("#actressList"))
+
+//composer list
+
+composer_list = new ComposerList();
+composer_list.add(new Composer("John Willims",100000));
+composer_list.add(new Composer("Hans Zimmer",100000));
+composer_list.add(new Composer("James Horner",100000));
+composer_list.add(new Composer("Thomas Newman",100000));
+composer_list.add(new Composer("Danny Elfman",100000));
+composer_list.add(new Composer("Michael Giacchino",100000));
+composer_list.add(new Composer("James Newton Howard",100000));
+composer_list.add(new Composer("Howard Shore",100000));
+composer_list.add(new Composer("Alexandre Desplat",100000));
+composer_list.add(new Composer("Alan Silvestri",100000));
+
+composer_list.renderInto($("#composerList"))
+
 
 $("#game").click(function(){
 	var question2 = prompt("What is the name of your movie?");

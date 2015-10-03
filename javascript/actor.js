@@ -7,11 +7,13 @@ Actor.prototype.hire = function(){
 	if(this.affordable()){
 		currentMovie.cast.push(this);
 		currentProdco.takeCash(this.fee);
-		if(mode = "sel_actor"){
+		if(mode == "sel_actor"){
 			changeMode("sel_actress");
 		}
 		else{
+
 			changeMode("sel_composer");
+			
 		}
 	}
 	else{
