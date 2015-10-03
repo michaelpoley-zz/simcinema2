@@ -7,7 +7,7 @@ Composer.prototype.hire = function(){
 	if(this.affordable()){
 		currentMovie.composer = this;
 		currentProdco.takeCash(this.fee);
-		changeMode("production_release");
+		changeMode("sel_sfx");
 	}
 	else{
 		alert("you can't afford " + this.name)

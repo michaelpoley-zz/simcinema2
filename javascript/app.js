@@ -182,11 +182,25 @@ composer_list.add(new Composer("Thomas Newman",100000));
 composer_list.add(new Composer("Danny Elfman",100000));
 composer_list.add(new Composer("Michael Giacchino",100000));
 composer_list.add(new Composer("James Newton Howard",100000));
-composer_list.add(new Composer("Howard Shore",100000));
-composer_list.add(new Composer("Alexandre Desplat",100000));
 composer_list.add(new Composer("Alan Silvestri",100000));
+composer_list.add(new Composer("Public domain classical music",0));
+composer_list.add(new Composer("Cold Silence",100000));
 
 composer_list.renderInto($("#composerList"))
+//special effects list
+sfx_list = new SfxList();
+sfx_list.add(new Sfx("Industrial Light & Magic",100000));
+sfx_list.add(new Sfx("WETA Digital",100000));
+sfx_list.add(new Sfx("Digital Domain",100000));
+sfx_list.add(new Sfx("Zoic Studios",100000));
+sfx_list.add(new Sfx("Double Negative",100000));
+sfx_list.add(new Sfx("Framestore",100000));
+sfx_list.add(new Sfx("Sony Image Works",100000));
+sfx_list.add(new Sfx("Svengali FX",100000));
+sfx_list.add(new Sfx("Stargate Digital",100000));
+sfx_list.add(new Sfx("No SPecial Effects",100000));
+
+sfx_list.renderInto($("#sfxList"))
 
 
 $("#game").click(function(){

@@ -1,11 +1,11 @@
-function EffectsHouse(name,fee){
+function Sfx(name,fee){
 	Talent.call(this,name,fee);//call the constructor of the object we're inheriting from
 }
-EffectsHouse.prototype = Object.create(Talent.prototype); //inherit from talent
+Sfx.prototype = Object.create(Talent.prototype); //inherit from talent
 
-EffectsHouse.prototype.hire = function(){
+Sfx.prototype.hire = function(){
 	if(this.affordable()){
-		currentMovie.cast.push(this);
+		currentMovie.sfx= this;
 		currentProdco.takeCash(this.fee);
 		changeMode("production_release");
 	}
